@@ -17,7 +17,7 @@ constexpr int kLcdRs = 27, kLcdEn = 14, kLcdD4 = 15, kLcdD5 = 13, kLcdD6 = 5, kL
 
 // ---- DC モータ (r, θ, z の順) ----
 // 回転方向が逆なら -1 にする
-constexpr int8_t kAxisDir[3] = {-1, +1, +1};
+constexpr int8_t kAxisDir[3] = {+1, -1, +1};
 // 速度モードごとの最大 duty [%]
 constexpr float kDutyLow = 30.0f;
 constexpr float kDutyHigh = 50.0f;
@@ -32,8 +32,8 @@ constexpr float kRotateMaxDeg = 180.0f;
 constexpr float kRotateInitDeg = 90.0f;
 constexpr float kRotateSpeedDegPerSec = 90.0f;  // 右スティックいっぱいで回る速さ (低速モードはこの半分)
 
-constexpr float kGripOpenDeg = 30.0f;    // 開いたときの角度 (要調整)
-constexpr float kGripCloseDeg = 120.0f;  // 閉じたときの角度 (要調整)
+constexpr float kGripOpenDeg = 180.0f;  // 開いたときの角度
+constexpr float kGripCloseDeg = 70.0f;  // 閉じたときの角度
 constexpr float kGripSpeedDegPerSec = 120.0f;
 
 // ---- LCD ----

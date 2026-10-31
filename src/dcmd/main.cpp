@@ -31,6 +31,9 @@ constexpr float kMaxDutyHard = 80.0f;  // CWMC 側の設定に関係なくこれ
 // REF ピンがこのレベルのとき「非常停止中」とみなす
 // ※要確認: 非常停止ボタンを押してシリアルの REF= の値で確かめ、逆なら HIGH にする
 constexpr int kRefEstopLevel = LOW;
+// REF 信号が D12 に届いていないため判定を無効化している。非常停止はボタンによるモーター電源の遮断に任せる
+// 配線を直したら true に戻す
+constexpr bool kRefEnabled = false;
 
 PwmOut pwmN(kPwmN);
 PwmOut pwmL(kPwmL);
@@ -80,7 +83,7 @@ uint8_t readDip() {
     return n;
 }
 
-bool estopActive() { return digitalRead(kRefPin) == kRefEstopLevel; }
+bool estopActive() { return kRefEnabled && digitalRead(kRefPin) == kRefEstopLevel; }
 
 void receiveCan(uint32_t now) {
     while (CAN.available()) {

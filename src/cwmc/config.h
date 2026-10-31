@@ -7,7 +7,7 @@ namespace cfg {
 
 // ---- PS5 コントローラ ----
 // コントローラ本体の Bluetooth MAC アドレス (README の手順で調べて書き換える)
-constexpr const char* kPs5Mac = "00:00:00:00:00:00";
+constexpr const char* kPs5Mac = "14:3A:9A:2E:AC:11";
 
 // ---- ピン ----
 constexpr int kCanRxPin = 4;

@@ -32,8 +32,8 @@ constexpr float kRotateMaxDeg = 180.0f;
 constexpr float kRotateInitDeg = 90.0f;
 constexpr float kRotateSpeedDegPerSec = 90.0f;  // 右スティックいっぱいで回る速さ (低速モードはこの半分)
 
-constexpr float kGripOpenDeg = 30.0f;    // 開いたときの角度 (要調整)
-constexpr float kGripCloseDeg = 120.0f;  // 閉じたときの角度 (要調整)
+constexpr float kGripOpenDeg = 180.0f;  // 開いたときの角度
+constexpr float kGripCloseDeg = 70.0f;  // 閉じたときの角度
 constexpr float kGripSpeedDegPerSec = 120.0f;
 
 // ---- LCD ----

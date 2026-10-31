@@ -17,7 +17,7 @@ constexpr int kLcdRs = 27, kLcdEn = 14, kLcdD4 = 15, kLcdD5 = 13, kLcdD6 = 5, kL
 
 // ---- DC モータ (r, θ, z の順) ----
 // 回転方向が逆なら -1 にする
-constexpr int8_t kAxisDir[3] = {-1, +1, +1};
+constexpr int8_t kAxisDir[3] = {+1, -1, +1};
 // 速度モードごとの最大 duty [%]
 constexpr float kDutyLow = 30.0f;
 constexpr float kDutyHigh = 50.0f;
